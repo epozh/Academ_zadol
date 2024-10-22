@@ -1,12 +1,14 @@
 import time
 import psutil
-mem = psutil.Process().memory_info().rss 
-start = time.time()
+from utils import get_memory_usage
+from utils import get_current_time
+from utils import read_input_file
+from utils import write_output
+from utils import print_execution_details
 
-f = open('input.txt', 'r')
-a = f.readline().split()
-V = f.readline()  # то что надо найти считыаем
-f.close()
+mem_usage_before = get_memory_usage()
+start_time = get_current_time()
+n, s = read_input_file('input.txt')
 
 
 def search(n):
@@ -21,9 +23,6 @@ def search(n):
         return '-1'
 
 
-f1 = open('output.txt', 'w')
-f1.write(' '.join(map(str, search(a))))
-f1.close()
-end = time.time() - start
-print(end)
-print('{}'.format(mem))
+write_output('output.txt', result)
+execution_time = time.time() - start
+print_execution_details(execution_time, mem)
