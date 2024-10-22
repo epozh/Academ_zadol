@@ -6,10 +6,6 @@ from utils import read_input_file
 from utils import write_output
 from utils import print_execution_details
 
-mem_usage_before = get_memory_usage()
-start_time = get_current_time()
-n, s = read_input_file('input.txt')
-
 
 def search(n):
     b = []  # пустой массив
@@ -23,8 +19,10 @@ def search(n):
         return '-1'
 
 
-write_output_and_print_details('output.txt', result, start, mem)
 
 if __name__ == '__main__':
-    main()
+    mem_usage_before = get_memory_usage()
+    start_time = get_current_time()
+    n, s = read_input_file('input.txt')
+    write_output_and_print_details('output.txt', result, start, mem)
     
