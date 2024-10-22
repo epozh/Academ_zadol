@@ -13,11 +13,11 @@
 
 2. Перейти в папку с проектом:
 
-    cd Academ_zadol/lab1
+    cd Academ_zadol/1
    
 4. Перейти в папку с заданием:
 
-    cd Academ_zadol/lab1/task1
+    cd Academ_zadol/1/task1
 
 5. Запустить программу:
 
