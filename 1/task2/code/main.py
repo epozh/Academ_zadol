@@ -7,9 +7,6 @@ from utils import read_input_file
 from utils import write_output
 from utils import print_execution_details
 
-mem_usage_before = get_memory_usage()
-start_time = get_current_time()
-n, s = read_input_file('input.txt')
 
 x = ([int(i) for i in s.split()])
 
@@ -31,5 +28,6 @@ result = insertion_sort(x)
 write_output_and_print_details('output.txt', result, start, mem)
 
 if __name__ == '__main__':
-    main()
-    
+    mem_usage_before = get_memory_usage()
+    start_time = get_current_time()
+    n, s = read_input_file('input.txt')
