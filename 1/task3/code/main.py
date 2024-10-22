@@ -23,6 +23,4 @@ def search(n):
         return '-1'
 
 
-write_output('output.txt', result)
-execution_time = time.time() - start
-print_execution_details(execution_time, mem)
+write_output_and_print_details('output.txt', result, start, mem)
