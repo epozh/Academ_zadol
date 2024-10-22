@@ -24,3 +24,7 @@ def search(n):
 
 
 write_output_and_print_details('output.txt', result, start, mem)
+
+if __name__ == '__main__':
+    main()
+    
