@@ -24,3 +24,11 @@ def print_execution_details(execution_time, memory_usage):
     print(f"Время выполнения: {execution_time:.4f} секунд")
     print(f"Использование памяти: {memory_usage} байт")
 
+def write_output_and_print_details(filename, result, start_time, memory_usage):
+    with open(filename, 'w') as f:
+        f.write(' '.join(map(str, result)))
+    
+    execution_time = time.time() - start_time
+    
+    print(f"Время выполнения: {execution_time:.4f} секунд")
+    print(f"Использование памяти: {memory_usage} байт")
